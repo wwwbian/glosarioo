@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glosario Bilingüe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>Glosario Bilingüe de JavaScript</nav>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Buscar palabra...">
+        <button onclick="filterGlossary()">Buscar</button>
+    </div>
+
+    <ul id="glossary">
+        <li><span onclick="showDefinition(this)" data-translation="Variable" data-meaning="Espacio en memoria que permite almacenar datos para su uso en el código. En JavaScript, se declaran con let, const, o var."><strong>Variable</strong></span></li>
+        <li><span onclick="showDefinition(this)" data-translation="Función" data-meaning="Bloque de código reutilizable que ejecuta una tarea específica cuando es llamado. Se define con la palabra clave function o como una arrow function"><strong>Function</strong></span></li>
+        <li><span onclick="showDefinition(this)" data-translation="Arreglo" data-meaning="Colección ordenada de elementos que pueden almacenarse y manipularse como una unidad. En JavaScript, se crea con corchetes []."><strong>Array</strong></span></li>
+        <li><span onclick="showDefinition(this)" data-translation="Modelo de Objeto de Documento" data-meaning=" Representación estructural de la página web que permite a JavaScript acceder y manipular elementos HTML."><strong> DOM (Document Object Model)</strong></span></li>
+        <li><span onclick="showDefinition(this)" data-translation="Objeto" data-meaning="Estructura de datos que almacena datos en pares clave-valor. En JavaScript, se crea con llaves {} y es fundamental en la programación orientada a objetos."><strong>Object</strong></span></li>
+        <li><span onclick="showDefinition(this)" data-translation="Evento" data-meaning="Acción que ocurre en la página, como un clic o el envío de un formulario, y que puede desencadenar una función en JavaScript."><strong> Event</strong></span></li>
+        <li><span onclick="showDefinition(this)" data-translation="Evento de escucha" data-meaning="Método que permite detectar eventos en elementos específicos y ejecutar funciones en respuesta. En JavaScript se utiliza addEventListener."><strong> Event Listener</strong></span></li>
+        <li><span onclick="showDefinition(this)" data-translation="Función de Retrollamada" data-meaning="Función que se pasa como argumento a otra función y se ejecuta después de que esta última termina su trabajo."><strong>Callback Function</strong></span></li>
+        <li><span onclick="showDefinition(this)" data-translation="Programación Asíncrona" data-meaning="Técnica que permite que el código se ejecute sin bloquear el flujo principal. JavaScript la maneja mediante promesas, async/await, y callbacks."><strong>Asynchronous Programming</strong></span></li>
+        <li><span onclick="showDefinition(this)" data-translation="Promesas" data-meaning="Objeto que representa el eventual resultado (resolución o rechazo) de una operación asíncrona."><strong>Promise</strong></span></li>
+        <li><span onclick="showDefinition(this)" data-translation="Asincronia/Espera" data-meaning=" Sintaxis que facilita trabajar con promesas en JavaScript, permitiendo escribir código asíncrono de manera más legible."><strong>Async/Await</strong></span></li>
+        <li><span onclick="showDefinition(this)" data-translation="Notación de Objeto de JavaScript" data-meaning=" Formato de datos ligero y legible utilizado para intercambiar datos. Usa una estructura de pares clave-valor similar a los objetos."><strong>JSON (JavaScript Object Notation)</strong></span></li>
+        <li><span onclick="showDefinition(this)" data-translation="Interfaz de Programación de Aplicaciones" data-meaning="Conjunto de funciones que permiten a las aplicaciones comunicarse entre sí. En JavaScript, se utiliza para interactuar con servicios externos."><strong>API (Application Programming Interface)</strong></span></li>
+        <li><span onclick="showDefinition(this)" data-translation="Devolver" data-meaning="Finaliza la ejecución de una función y especifica el valor que debe devolver."><strong>Return</strong></span></li>
+        <li><span onclick="showDefinition(this)" data-translation="Si/Si no" data-meaning="if evalúa una condición, y si es verdadera, ejecuta el bloque de código. else se ejecuta si la condición es falsa."><strong>If/Else</strong></span></li>
+        <li><span onclick="showDefinition(this)" data-translation="Mientras" data-meaning="Ejecuta un bloque de código repetidamente mientras una condición se cumpla."><strong>While</strong></span></li>
+        <li><span onclick="showDefinition(this)" data-translation="Cambio" data-meaning="Evalúa una expresión y ejecuta el bloque de código correspondiente a su valor."><strong>Switch</strong></span></li>
+        <li><span onclick="showDefinition(this)" data-translation="Intentar" data-meaning="try ejecuta un bloque de código."><strong>Try</strong></span></li>
+        <li><span onclick="showDefinition(this)" data-translation="Clase" data-meaning="Declara una clase que permite definir estructuras y métodos en programación orientada a objetos."><strong>Class</strong></span></li>
+        <li><span onclick="showDefinition(this)" data-translation="Nuevo" data-meaning="Crea una nueva instancia de un objeto."><strong>New</strong></span></li>
+        <li><span onclick="showDefinition(this)" data-translation="Nulo" data-meaning="Representa la ausencia intencional de un valor para una variable u objeto."><strong>Null</strong></span></li>
+        <li><span onclick="showDefinition(this)" data-translation=" Modulo" data-meaning="Fragmento de código encapsulado que exporta funcionalidades específicas y permite importar en otras partes de la aplicación. JavaScript permite módulos con export e import. "><strong> Module</strong></span></li>
+        <li><span onclick="showDefinition(this)" data-translation="Indefinido" data-meaning="Indica que una variable ha sido declarada pero no tiene un valor asignado."><strong>Undefined</strong></span></li>
+        <li><span onclick="showDefinition(this)" data-translation="No es un Número" data-meaning="Representa un valor que no es un número en operaciones aritméticas."><strong>NaN</strong></span></li>
+        <li><span onclick="showDefinition(this)" data-translation="Búsqueda" data-meaning=" Método para realizar solicitudes HTTP y obtener datos desde un servidor. Retorna una promesa y permite trabajar con datos de APIs."><strong>Fetch</strong></span></li>
+        <li><span onclick="showDefinition(this)" data-translation="Capturar" data-meaning=" catch captura cualquier error que ocurra."><strong>Catch</strong></span></li>
+        <li><span onclick="showDefinition(this)" data-translation="Matemáticas" data-meaning="Objeto global que contiene métodos y propiedades para operaciones matemáticas (por ejemplo, Math.PI, Math.random)."><strong>Math</strong></span></li>
+        <li><span onclick="showDefinition(this)" data-translation="Cadena" data-meaning="Representa texto y proporciona métodos útiles para manipulación de texto."><strong>String</strong></span></li>
+        <li><span onclick="showDefinition(this)" data-translation="Depurar" data-meaning="Pausa la ejecución del código en ese punto, permitiendo depuración."><strong>Debugger</strong></span></li>
+        <li><span onclick="showDefinition(this)" data-translation="Fecha" data-meaning="Representa fechas y horas, permitiendo realizar operaciones relacionadas."><strong>Date </strong></span></li>
+        <li><span onclick="showDefinition(this)" data-translation="Mapear" data-meaning="Un método usado para crear un nuevo arreglo transformando cada elemento en un arreglo existente."><strong>Map </strong></span></li>
+        <li><span onclick="showDefinition(this)" data-translation="Filtrar" data-meaning="Un método que crea un nuevo arreglo con elementos que pasan una prueba definida por una función."><strong>Filter</strong></span></li>
+         <li><span onclick="showDefinition(this)" data-translation="Predeterminado" data-meaning="Una palabra clave usada en una declaración switch para ejecutar código si ninguna de las opciones coinciden."><strong>Default</strong></span></li>
+        
+    </ul>
+
+    
+
+    <div id="definitionModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h2 id="modalWord"></h2>
+            <h3 id="modalTranslation"></h3>
+            <p id="modalDefinition"></p>
+        </div>
+    </div>
+    
+
+    <footer>&copy; 2024 Glosario Bilingüe</footer>
+    <script src="index.js"></script>
+</body>
+</html>
